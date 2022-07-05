@@ -1,0 +1,18 @@
+name: 'pr auto link'
+description: 'PR关闭时给issue添加标签'
+inputs:
+  repository:
+    description: "存储库的名称及其作者,例如: actions/checkout"
+    required: true
+    default: ${{ github.repository }}
+  token:
+    description: "给机器人修改Issue的权限Token"
+    required: true
+    default: ${{ github.token }}
+  pr_number:
+    description: "当前事件的Pr编号"
+    required: true
+    default: ${{ github.event.pull_request.number }}
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
