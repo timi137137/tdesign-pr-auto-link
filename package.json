@@ -1,6 +1,6 @@
 {
   "name": "tdesign-pr-auto-link",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PR关闭时给issue添加标签",
   "main": "index.js",
   "scripts": {
