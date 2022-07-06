@@ -26,7 +26,7 @@ async function Run(){
 
             issues_number.map(async (issue_number) => {
                 if (issue_number.indexOf("/") !== -1) {
-                    core.info("Pr编号: " + pull_number + ", 发现关联费本仓库Issue " + issue_number + ", 已跳过");
+                    core.info("Pr编号: " + pull_number + ", 发现关联非本仓库Issue " + issue_number + ", 已跳过");
                     return;
                 }
 
