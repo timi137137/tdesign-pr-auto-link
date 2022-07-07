@@ -8871,7 +8871,7 @@ async function Run(){
             const issues = pr_body[1].split("### 💡 需求背景和解决方案")[0];
             const issues_number = issues.match(/(- )?(([\w\.@\:-~]+)\/([\w\.@\:\-~]+))?#(\d+)/g);
 
-            if (issues_number.length === 0) {
+            if (issues_number === null) {
                 core.info("Pr编号: " + pull_number + ", 没有检测到关联Issue");
                 return;
             }
