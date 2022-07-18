@@ -8887,12 +8887,13 @@ async function Run(){
                     core.warning("Pr编号: " + pull_number + ", Issue编号解析错误！\n" + issue_number)
                     return;
                 }
-                await octokit.rest.issues.addLabels({
+                // TODO 暂时屏蔽
+                /*await octokit.rest.issues.addLabels({
                     owner,
                     repo,
                     issue_number,
                     labels: [ "to be published" ],
-                });
+                });*/
                 core.info("Pr编号: " + pull_number + ", 关联Issue " + issue_number + ", 已添加标签");
             });
         } else {
